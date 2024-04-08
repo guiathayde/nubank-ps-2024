@@ -1,0 +1,26 @@
+{
+  "name": "nubank",
+  "version": "1.0.0",
+  "description": "Processo seletivo Nubank 2024",
+  "main": "./dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "dev": "tsx src/main.ts",
+    "build": "tsc"
+  },
+  "keywords": [
+    "nubank",
+    "typescript",
+    "node"
+  ],
+  "author": "Guilherme César Athayde",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.4"
+  }
+}
