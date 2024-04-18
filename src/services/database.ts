@@ -35,6 +35,11 @@ export class Database {
     this.accounts.push(account);
   }
 
+  updateAccount(account: Account): void {
+    const index = this.accounts.findIndex((a) => a.id === account.id);
+    this.accounts[index] = account;
+  }
+
   getAllTransactions(): Array<Transaction> {
     return this.transactions;
   }
@@ -45,5 +50,16 @@ export class Database {
 
   createTransaction(transaction: Transaction): void {
     this.transactions.push(transaction);
+  }
+
+  createTransactionInAccount(
+    accountId: string,
+    transaction: Transaction
+  ): void {
+    const account = this.getAccountById(accountId);
+
+    if (account) {
+      account.history.push(transaction);
+    }
   }
 }
